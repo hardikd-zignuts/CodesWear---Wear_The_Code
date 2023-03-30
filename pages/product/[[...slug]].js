@@ -105,30 +105,23 @@ const Slug = ({ productData }) => {
 export default Slug
 
 export async function getServerSideProps(ctx) {
+    const cat = ctx.params.slug[0]
     let category = ''
 
-    switch (ctx.params.slug[0]) {
-        case 'T-Shirts':
-            category = "tshirts"
-
-        case 'Hoodie':
-            category = "hoodie"
-
-        case 'Sticker':
-            category = "stickers"
-
-        case 'Mug':
-            category = "mugs"
-
-        default:
-            break;
+    if (cat === 'T-Shirts') {
+        category = 'tshirts'
+    } else if (cat === 'Hoodie') {
+        category = 'hoodie'
+    } else if (cat === 'Sticker') {
+        category = 'stickers'
+    } else if (cat === 'Mug') {
+        category = 'mugs'
     }
-    const name = ctx.params.slug[1]
-    console.log(name,category)
 
-    const res = await fetch(`http://localhost:4000/${category}?name=${name}`)
+    const name = ctx.params.slug[1]
+
+    const res = await fetch(`http://localhost:4000/${category.toString()}?name=${name}`)
     const data = await res.json()
-    console.log(name)
 
     return {
         props: {

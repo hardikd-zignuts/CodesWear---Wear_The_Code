@@ -9,7 +9,7 @@ const Hoodie = ({ productData }) => {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap justify-around -m-4">
           {
-            productData.map(hoodie => {
+            productData.map((hoodie, index) => {
               return (
                 <div key={hoodie.img} className="lg:w-1/4 md:w-1/2 p-4 w-full border shadow-md rounded-md text-center m-2">
                   <a className="block relative  rounded overflow-hidden">
@@ -21,7 +21,7 @@ const Hoodie = ({ productData }) => {
                     <p className="mt-1">₹{hoodie.price}</p>
                   </div>
                   <Link href={`/product/${hoodie.category}/${hoodie.name}`}>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 mt-3 px-4 rounded-full">
+                    <button id={`p${index}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 mt-3 px-4 rounded-full">
                       View
                     </button>
                   </Link>

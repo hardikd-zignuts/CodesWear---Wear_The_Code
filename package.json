@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json-server": "json-server -p 4000 --watch db.json"
+    "json-server": "json-server -p 4000 --watch db.json",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "eslint": "8.36.0",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "cypress": "^12.9.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
   }
