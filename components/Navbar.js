@@ -48,6 +48,7 @@ const Navbar = () => {
           </Link>
         </nav>
         <div
+          id="cart-open"
           onClick={toogleCart}
           className="cursor-pointer hover:text-pink-500"
         >
@@ -56,10 +57,11 @@ const Navbar = () => {
       </div>
 
       <div
+        id="cart"
         ref={ref}
         className="hidden z-50 absolute right-0 w-[400px] top-0 flex h-[100vh] flex-col justify-start pt-14  bg-pink-200 text-black transition duration-500 transform translate-x-full cursor-pointer"
       >
-        <div onClick={toogleCart} className="absolute right-3 top-3">
+        <div id="cart-close" onClick={toogleCart} className="absolute right-3 top-3">
           <AiFillCloseCircle size={25} />
         </div>
         <ol className="p-4 text-xl">
