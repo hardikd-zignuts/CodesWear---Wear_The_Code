@@ -1,15 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
-import { AiOutlineShoppingCart, AiFillCloseCircle } from "react-icons/ai";
+import {
+  AiOutlineShoppingCart,
+  AiFillCloseCircle,
+  AiOutlinePlusCircle,
+  AiOutlineMinusCircle,
+} from "react-icons/ai";
 
 const Navbar = () => {
   const ref = useRef(null);
   const toogleCart = () => {
     if (ref.current.className.includes("translate-x-full")) {
+      ref.current.classList.remove("hidden");
       ref.current.classList.remove("translate-x-full");
       ref.current.classList.add("translate-x-0");
     } else if (ref.current.className.includes("translate-x-0")) {
+      ref.current.classList.add("hidden");
       ref.current.classList.remove("translate-x-0");
       ref.current.classList.add("translate-x-full");
     }
@@ -49,20 +56,27 @@ const Navbar = () => {
 
       <div
         ref={ref}
-        className="absolute right-0 w-[200px] top-0 flex h-[500px] flex-col justify-start pt-14  bg-gray-900 text-white transition duration-500 transform translate-x-full"
+        className="hidden z-50 absolute right-0 w-[400px] top-0 flex h-[100vh] flex-col justify-start pt-14  bg-pink-200 text-black transition duration-500 transform translate-x-full cursor-pointer"
       >
         <div onClick={toogleCart} className="absolute right-3 top-3">
           <AiFillCloseCircle size={25} />
         </div>
-        <a href="#" className="px-4 py-2 hover:bg-gray-800">
-          Link 1
-        </a>
-        <a href="#" className="px-4 py-2 hover:bg-gray-800">
-          Link 2
-        </a>
-        <a href="#" className="px-4 py-2 hover:bg-gray-800">
-          Link 3
-        </a>    
+        <ol className="p-4 text-xl">
+          <div className="flex justify-between">
+            1. T shirts
+            <div className="flex items-center gap-2">
+              <AiOutlineMinusCircle />2<AiOutlinePlusCircle />
+            </div>
+          </div>
+        </ol>
+        <div className="flex gap-3 m-3">
+          <button className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
+            Checkout
+          </button>
+          <button className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
+            Clear Cart
+          </button>
+        </div>
       </div>
     </header>
   );

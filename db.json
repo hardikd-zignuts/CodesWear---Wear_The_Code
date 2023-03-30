@@ -1,0 +1,142 @@
+{
+  "tshirts": [
+    {
+      "category": "T-Shirts",
+      "name": "Amazon Brand - Symbol Men's Regular Polo Shirts",
+      "price": 499,
+      "img": "https://m.media-amazon.com/images/I/61L9NXxwPAL._UX679_.jpg"
+    },
+    {
+      "category": "T-Shirts",
+      "name": "Allen Solly Men's Regular Fit Polo",
+      "price": 999,
+      "img": "https://m.media-amazon.com/images/I/71BWjfj5ouL._UX679_.jpg"
+    },
+    {
+      "category": "T-Shirts",
+      "name": "Tick Printed T-Shirts for Women || Cotton Tshirts || Stylish Tee || Oversize Tshirts",
+      "price": 299,
+      "img": "https://m.media-amazon.com/images/I/618w14h0ZhL._UX679_.jpg"
+    },
+    {
+      "category": "T-Shirts",
+      "name": "LEOTUDE Men's Regular Fit Half Sleeve Matty Polo T-Shirt (Color Grey)",
+      "price": 699,
+      "img": "https://m.media-amazon.com/images/I/51XKYuRRO+L._UX679_.jpg"
+    },
+    {
+      "category": "T-Shirts",
+      "name": "CALM DOWN Oversized T-Shirt for Women",
+      "price": 199,
+      "img": "https://m.media-amazon.com/images/I/614wjgHng7L._UX679_.jpg"
+    },
+    {
+      "category": "T-Shirts",
+      "name": "RodZen Men's Cotton Half Sleeve Regular Fit Striped T-Shirt",
+      "price": 899,
+      "img": "https://m.media-amazon.com/images/I/717dxjy44lL._UY741_.jpg"
+    }
+  ],
+  "hoodie": [
+    {
+      "category": "Hoodie",
+      "name": "Alan Jones Clothing Men's Fleece Hooded Hoodie",
+      "price": 499,
+      "img": "https://m.media-amazon.com/images/I/71GIv3ovW3L._UY741_.jpg"
+    },
+    {
+      "category": "Hoodie",
+      "name": "More & More Unisex-Adult Cotton Hooded Neck Printed Hoodie",
+      "price": 999,
+      "img": "https://m.media-amazon.com/images/I/61mK2-mPJjL._UX679_.jpg"
+    },
+    {
+      "category": "Hoodie",
+      "name": "SXV 'Chicago’ Printed Cool Aesthetic Sweatshirt Hoodie",
+      "price": 299,
+      "img": "https://m.media-amazon.com/images/I/61HU5M3mukL._UX569_.jpg"
+    },
+    {
+      "category": "Hoodie",
+      "name": "JERKYN unisex-adult Cotton Blend Hooded Neck Sweatshirt",
+      "price": 699,
+      "img": "https://m.media-amazon.com/images/I/61BGnzB0NKL._UX679_.jpg"
+    },
+    {
+      "category": "Hoodie",
+      "name": "Veirdo Fleece Material Regular Fit Full Sleeves Hooded Neck Navy & Maroon Colorblock Winter Wear Casual Jacket Sweatshirt Hoodie for",
+      "price": 199,
+      "img": "https://m.media-amazon.com/images/I/61+KV3qFJWL._UX679_.jpg"
+    },
+    {
+      "category": "Hoodie",
+      "name": "crazymonk Naruto Itachi Uchiha Unisex Anime Hoodie",
+      "price": 899,
+      "img": "https://m.media-amazon.com/images/I/61v9KW6sBzL._UX679_.jpg"
+    }
+  ],
+  "stickers": [
+    {
+      "name": "Sticker",
+      "price": 499,
+      "img": "https://m.media-amazon.com/images/I/71cMSqXtHyL._SL1080_.jpg"
+    },
+    {
+      "name": "Sticker",
+      "price": 999,
+      "img": "https://m.media-amazon.com/images/I/61o+FvlZhFL._SL1080_.jpg"
+    },
+    {
+      "name": "Sticker",
+      "price": 299,
+      "img": "https://m.media-amazon.com/images/I/61YnYuNntdL._SL1080_.jpg"
+    },
+    {
+      "name": "Sticker",
+      "price": 699,
+      "img": "https://m.media-amazon.com/images/I/81VE52pdniL._SL1500_.jpg"
+    },
+    {
+      "name": "Sticker",
+      "price": 199,
+      "img": "https://m.media-amazon.com/images/I/51pPQYJbRnL.jpg"
+    },
+    {
+      "name": "Sticker",
+      "price": 899,
+      "img": "https://m.media-amazon.com/images/I/91BMA9nuCVL._SL1500_.jpg"
+    }
+  ],
+  "mugs": [
+    {
+      "name": "Mug",
+      "price": 499,
+      "img": "https://m.media-amazon.com/images/I/41DGOcIimsL._SL1000_.jpg"
+    },
+    {
+      "name": "Mug",
+      "price": 999,
+      "img": "https://m.media-amazon.com/images/I/71cjxhpc1CL._SL1500_.jpg"
+    },
+    {
+      "name": "Mug",
+      "price": 299,
+      "img": "https://m.media-amazon.com/images/I/41qi3-Dt1eL._SL1000_.jpg"
+    },
+    {
+      "name": "Mug",
+      "price": 699,
+      "img": "https://m.media-amazon.com/images/I/41j73+Bq0cL.jpg"
+    },
+    {
+      "name": "Mug",
+      "price": 199,
+      "img": "https://m.media-amazon.com/images/I/51S7P9WR-WL._SL1000_.jpg"
+    },
+    {
+      "name": "Mug",
+      "price": 899,
+      "img": "https://m.media-amazon.com/images/I/61bGxZUBVTL._SL1500_.jpg"
+    }
+  ]
+}
