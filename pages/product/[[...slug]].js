@@ -4,7 +4,6 @@ import { toast } from 'react-hot-toast'
 
 const Slug = ({ productData }) => {
     const [pin, setPin] = useState()
-    console.log(productData)
 
 
     const checkStatus = async () => {
@@ -42,7 +41,7 @@ const Slug = ({ productData }) => {
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-pink-500" viewBox="0 0 24 24">
                                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                                 </svg>
-                                <span className="text-gray-600 ml-3">4 Reviews</span>
+                                <span className="text-gray-600 ml-3">45 Reviews</span>
                             </span>
                             <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
                                 <a className="text-gray-500">
@@ -93,7 +92,7 @@ const Slug = ({ productData }) => {
                         </div>
                         <div className="flex justify-between my-2">
                             <input onChange={(e) => setPin(e.target.value)} className='border px-4 py-2 rounded-sm border-gray-400 w-[60%]' type="number" placeholder='Enter your pincode' />
-                            <button onClick={checkStatus} className=" text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check Availblity</button>
+                            <button id='check-btn' onClick={checkStatus} className=" text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check Availblity</button>
                         </div>
                     </div>
                 </div>

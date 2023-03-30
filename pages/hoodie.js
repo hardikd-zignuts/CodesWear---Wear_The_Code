@@ -21,7 +21,7 @@ const Hoodie = ({ productData }) => {
                     <p className="mt-1">₹{hoodie.price}</p>
                   </div>
                   <Link href={`/product/${hoodie.category}/${hoodie.name}`}>
-                    <button id={`p${index}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 mt-3 px-4 rounded-full">
+                    <button id={`h${index}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 mt-3 px-4 rounded-full">
                       View
                     </button>
                   </Link>

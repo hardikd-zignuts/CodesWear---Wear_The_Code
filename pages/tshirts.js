@@ -9,7 +9,7 @@ const TShirts = ({ productData }) => {
                 <div className="flex flex-wrap justify-around -m-4">
 
                     {
-                        productData.map(shirt => {
+                        productData.map((shirt,index) => {
                             return (
 
                                 <div key={shirt.img} className="lg:w-1/4 md:w-1/2 p-4 w-full border shadow-md rounded-md text-center m-2">
@@ -22,7 +22,7 @@ const TShirts = ({ productData }) => {
                                         <p className="mt-1">₹{shirt.price}</p>
                                     </div>
                                     <Link href={`/product/${shirt.category}/${shirt.name}`}>
-                                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 mt-3 px-4 rounded-full">
+                                        <button id={`t${index}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 mt-3 px-4 rounded-full">
                                             View
                                         </button>
                                     </Link>
