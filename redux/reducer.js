@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "./types"
+import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART } from "./types"
 
 const initialState = {
     total: 0,
@@ -35,6 +35,12 @@ const CartReducer = (state = initialState, action) => {
                 ...state,
                 product: tempData,
                 total: state.total - 1
+            }
+        case CLEAR_CART:
+            return {
+                ...state,
+                product: [],
+                total: 0
             }
 
         default:

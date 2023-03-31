@@ -1,4 +1,4 @@
-import { addToCart, removeFromCart } from "@/redux/actions";
+import { addToCart, clearCart, removeFromCart } from "@/redux/actions";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
@@ -84,8 +84,10 @@ const Navbar = () => {
               product.map((item, index) => {
                 const { name, price, id } = item
                 return (
-                  <div key={item.id} className="flex text-sm justify-between">
-                    {index + 1}. {item.name}
+                  <div key={item.id} className="flex text-sm items-center justify-between">
+                    <div>
+                      {index + 1}. {item.name}
+                    </div>
                     <div className="flex items-center gap-2">
                       <AiOutlineMinusCircle size={20} onClick={() => dispatch(removeFromCart({
                         id
@@ -100,6 +102,9 @@ const Navbar = () => {
                         quantity: 1
                       }))} />
                     </div>
+                    <div className="ml-2 text-sm">
+                      ₹{item.price}
+                    </div>
                   </div>
                 )
               })
@@ -108,15 +113,21 @@ const Navbar = () => {
 
         </ol>
         <div className="flex gap-3 m-3">
-          <button className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded">
-            Checkout
-          </button>
-          <button className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded">
-            Clear Cart
-          </button>
+          {
+            (product.length !== 0) &&
+            <>
+              <button className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded">
+                Checkout
+              </button>
+
+              <button button onClick={() => dispatch(clearCart())} className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded">
+                Clear Cart
+              </button>
+            </>
+          }
         </div>
       </div>
-    </header>
+    </header >
   );
 };
 
