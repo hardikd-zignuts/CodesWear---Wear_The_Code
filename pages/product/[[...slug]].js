@@ -1,10 +1,13 @@
+import { addToCart } from '@/redux/actions'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
+import { useDispatch } from 'react-redux'
 
 const Slug = ({ productData }) => {
+    const { id, name, price, category } = productData
     const [pin, setPin] = useState()
-
+    const dispatch = useDispatch()
 
     const checkStatus = async () => {
         const res = await fetch('http://localhost:3000/api/pincode')
@@ -88,7 +91,13 @@ const Slug = ({ productData }) => {
                         </div>
                         <div className="flex">
                             <span className="title-font font-medium text-2xl text-gray-900">₹{productData.price}</span>
-                            <button className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Add to cart</button>
+                            <button onClick={() => dispatch(addToCart({
+                                id,
+                                name,
+                                price,
+                                quantity: 1,
+                                basePrice: price
+                            }))} className="flex ml-auto text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Add to cart</button>
                         </div>
                         <div className="flex justify-between my-2">
                             <input onChange={(e) => setPin(e.target.value)} className='border px-4 py-2 rounded-sm border-gray-400 w-[60%]' type="number" placeholder='Enter your pincode' />

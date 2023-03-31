@@ -1,3 +1,4 @@
+import { addToCart, removeFromCart } from "@/redux/actions";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
@@ -7,9 +8,13 @@ import {
   AiOutlinePlusCircle,
   AiOutlineMinusCircle,
 } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = () => {
   const ref = useRef(null);
+  const total = useSelector(state => state.total)
+  const product = useSelector(state => state.product)
+  const dispatch = useDispatch()
   const toogleCart = () => {
     if (ref.current.className.includes("translate-x-full")) {
       ref.current.classList.remove("hidden");
@@ -21,6 +26,12 @@ const Navbar = () => {
       ref.current.classList.add("translate-x-full");
     }
   };
+  const handleIncrement = () => {
+
+  }
+  const handleDecrement = () => {
+
+  }
   return (
     <header className="text-gray-600 body-font ">
       <div className="container mx-auto flex flex-wrap py-3 flex-col md:flex-row items-center">
@@ -50,8 +61,9 @@ const Navbar = () => {
         <div
           id="cart-open"
           onClick={toogleCart}
-          className="cursor-pointer hover:text-pink-500"
+          className="cursor-pointer hover:text-pink-500 relative"
         >
+          <span className="bg-pink-600 absolute right-[-5px] top-[-11px]  text-white rounded-full px-1">{total}</span>
           <AiOutlineShoppingCart size={30} />
         </div>
       </div>
@@ -65,12 +77,35 @@ const Navbar = () => {
           <AiFillCloseCircle size={25} />
         </div>
         <ol className="p-4 text-xl">
-          <div className="flex justify-between">
-            1. T shirts
-            <div className="flex items-center gap-2">
-              <AiOutlineMinusCircle />2<AiOutlinePlusCircle />
-            </div>
-          </div>
+          {
+            product.length == 0
+              ? <h2>No items Avalible</h2> :
+
+              product.map((item, index) => {
+                const { name, price, id } = item
+                return (
+                  <div key={item.id} className="flex text-sm justify-between">
+                    {index + 1}. {item.name}
+                    <div className="flex items-center gap-2">
+                      <AiOutlineMinusCircle size={20} onClick={() => dispatch(removeFromCart({
+                        id
+                      }))} />
+
+                      {item.quantity}
+
+                      <AiOutlinePlusCircle size={20} onClick={() => dispatch(addToCart({
+                        id,
+                        name,
+                        price,
+                        quantity: 1
+                      }))} />
+                    </div>
+                  </div>
+                )
+              })
+
+          }
+
         </ol>
         <div className="flex gap-3 m-3">
           <button className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
