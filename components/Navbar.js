@@ -61,9 +61,9 @@ const Navbar = () => {
         <div
           id="cart-open"
           onClick={toogleCart}
-          className="cursor-pointer hover:text-pink-500 relative"
+          className="cursor-pointer hover:text-purple-500 relative"
         >
-          <span className="bg-pink-600 absolute right-[-5px] top-[-11px]  text-white rounded-full px-1">{total}</span>
+          <span className="bg-purple-600 absolute right-[-5px] top-[-11px]  text-white rounded-full px-1">{total}</span>
           <AiOutlineShoppingCart size={30} />
         </div>
       </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
       <div
         id="cart"
         ref={ref}
-        className="hidden z-50 absolute right-0 w-[400px] top-0 flex h-[100vh] flex-col justify-start pt-14  bg-pink-200 text-black transition duration-500 transform translate-x-full cursor-pointer"
+        className="hidden z-50 absolute right-0 w-[400px] top-0 flex h-[100vh] flex-col justify-start pt-14  bg-purple-200 text-black transition duration-500 transform translate-x-full cursor-pointer"
       >
         <div id="cart-close" onClick={toogleCart} className="absolute right-3 top-3">
           <AiFillCloseCircle size={25} />
@@ -108,10 +108,10 @@ const Navbar = () => {
 
         </ol>
         <div className="flex gap-3 m-3">
-          <button className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded">
             Checkout
           </button>
-          <button className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 rounded">
             Clear Cart
           </button>
         </div>

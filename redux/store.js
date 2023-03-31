@@ -5,9 +5,9 @@ import CartReducer from "./reducer";
 
 
 const middleware = [thunkMiddleware];
-const Store = createStore(
+const store = createStore(
     CartReducer,
     composeWithDevTools(applyMiddleware(...middleware))
 );
 
-export default Store;
+export default store;

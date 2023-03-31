@@ -9,7 +9,7 @@ const TShirts = ({ productData }) => {
                 <div className="flex flex-wrap justify-around -m-4">
 
                     {
-                        productData.map((shirt,index) => {
+                        productData.map((shirt, index) => {
                             return (
 
                                 <div key={shirt.img} className="lg:w-1/4 md:w-1/2 p-4 w-full border shadow-md rounded-md text-center m-2">
