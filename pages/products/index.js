@@ -1,6 +1,7 @@
 import Loader from '@/components/Loader'
 import axios from 'axios'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
@@ -20,6 +21,7 @@ const Products = () => {
         let res = await fetch('https://dummyjson.com/products?limit=9&skip=0');
         let data = await res.json()
         setProductData(data.products)
+        setNum(prev => prev + 9)
     }
     useEffect(() => {
         fetchInitial()
@@ -40,17 +42,19 @@ const Products = () => {
                         <div className="flex flex-wrap justify-around m-4">
                             {
                                 productData.map(item => {
-                                    const { thumbnail, title, description, price } = item
+                                    const { thumbnail, title, description, price, id } = item
                                     return (
-                                        <div key={item.id} className="lg:w-1/4 md:w-1/2 p-4 w-full border shadow-md rounded-md text-center m-2 cursor-pointer">
-                                            <a className="block relative  rounded overflow-hidden">
-                                                <Image width={420} height={216} alt="ecommerce" className="mx-auto h-[32vh] w-auto" src={thumbnail} />
-                                            </a>
-                                            <div className="mt-4">
-                                                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{title}</h3>
-                                                <h2 className="text-gray-900 title-font text-lg font-medium">{description}</h2>
-                                                <p className="mt-1">${price}</p>
-                                            </div>
+                                        <div key={id} className="lg:w-1/4 md:w-1/2 p-4 w-full border shadow-md rounded-md text-center m-2 cursor-pointer">
+                                            <Link href={`/products/${id}`}>
+                                                <a className="block relative  rounded overflow-hidden">
+                                                    <Image width={420} height={216} alt="ecommerce" className="mx-auto h-[32vh] w-auto" src={thumbnail} />
+                                                </a>
+                                                <div className="mt-4">
+                                                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{title}</h3>
+                                                    <h2 className="text-gray-900 title-font text-lg font-medium">{description}</h2>
+                                                    <p className="mt-1">${price}</p>
+                                                </div>
+                                            </Link>
                                         </div>
                                     )
                                 })
@@ -59,7 +63,7 @@ const Products = () => {
                     </InfiniteScroll>
 
 
-                </div>
+                </div >
             </section >
         </>
     )
