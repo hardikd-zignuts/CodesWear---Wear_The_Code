@@ -43,8 +43,7 @@ const Navbar = () => {
           <Image src="/logo.png" width="200" height="100" alt="home" />
         </Link>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          {/* <Link href='/about' className="mr-5 hover:text-gray-900">About</Link>
-                    <Link href='/contact' className="mr-5 hover:text-gray-900">Contact</Link> */}
+          <Link href='/products' className="mr-5 hover:text-gray-900">Products</Link>
           <Link id="hoodie" href="/hoodie" className="mr-5 hover:text-gray-900">
             Hoodies
           </Link>
@@ -82,6 +81,7 @@ const Navbar = () => {
               ? <h2>No items Avalible</h2> :
 
               product.map((item, index) => {
+                console.log(item)
                 const { name, price, id } = item
                 return (
                   <div key={item.id} className="flex text-sm items-center justify-between">

@@ -1,11 +1,11 @@
 import { addToCart } from '@/redux/actions'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { useDispatch } from 'react-redux'
 
 const Slug = ({ productData }) => {
-    const { id, name, price, category } = productData
+    const { id, name, price } = productData
     const [pin, setPin] = useState()
     const dispatch = useDispatch()
 
@@ -25,7 +25,7 @@ const Slug = ({ productData }) => {
                 <div className="lg:w-4/5 mx-auto flex flex-wrap ">
                     <Image width={400} height={400} alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto  object-cover object-center rounded shadow-xl" src={productData.img} />
                     <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                        <h2 className="text-sm title-font text-gray-500 tracking-widest">{productData.category}</h2>
+                        <h2 className="text-sm title-font text-gray-500 tracking-widest">{productData.category.toUpperCase()}</h2>
                         <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{productData.name}</h1>
                         <div className="flex mb-4">
                             <span className="flex items-center">
@@ -128,7 +128,7 @@ export async function getServerSideProps(ctx) {
 
     const name = ctx.params.slug[1]
 
-    const res = await fetch(`http://localhost:4000/${category.toString()}?name=${name}`)
+    const res = await fetch(`http://localhost:4000/${category}?name=${name}`)
     const data = await res.json()
 
     return {

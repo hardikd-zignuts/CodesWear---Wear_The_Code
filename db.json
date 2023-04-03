@@ -89,64 +89,88 @@
   ],
   "stickers": [
     {
-      "name": "Sticker",
+      "id": "s1",
+      "category": "Sticker",
+      "name": "Pack of 51 Laptop Sticker for Programmer, Coder, Developer, IT Professional",
       "price": 499,
       "img": "https://m.media-amazon.com/images/I/71cMSqXtHyL._SL1080_.jpg"
     },
     {
-      "name": "Sticker",
+      "id": "s2",
+      "category": "Sticker",
+      "name": "Careflection || Coding Programming Sticker Decals - Pack of 16",
       "price": 999,
       "img": "https://m.media-amazon.com/images/I/61o+FvlZhFL._SL1080_.jpg"
     },
     {
-      "name": "Sticker",
+      "id": "s3",
+      "category": "Sticker",
+      "name": "woopme® Pack of 43 Coding Developer Laptop Mobile Bike Luggage",
       "price": 299,
       "img": "https://m.media-amazon.com/images/I/61YnYuNntdL._SL1080_.jpg"
     },
     {
-      "name": "Sticker",
+      "id": "s4",
+      "category": "Sticker",
+      "name": "Junkyard Vinyl Stickers for laptops Art n Craft, and Other Gadgets (Pack of 50)",
       "price": 699,
       "img": "https://m.media-amazon.com/images/I/81VE52pdniL._SL1500_.jpg"
     },
     {
-      "name": "Sticker",
+      "id": "s5",
+      "category": "Sticker",
+      "name": "Pack of 51 Laptop Sticker for Programmer Coder Developer IT Professional and Gammers",
       "price": 199,
       "img": "https://m.media-amazon.com/images/I/51pPQYJbRnL.jpg"
     },
     {
-      "name": "Sticker",
+      "id": "s6",
+      "category": "Sticker",
+      "name": "Coding Programming Sticker Decals - Pack of 40 (Vinyl Stickers,Multipurpose",
       "price": 899,
       "img": "https://m.media-amazon.com/images/I/91BMA9nuCVL._SL1500_.jpg"
     }
   ],
   "mugs": [
     {
-      "name": "Mug",
+      "id": "m1",
+      "category": "Mug",
+      "name": "HUMWE Ceramic Stages of Debugging Computer Programmer",
       "price": 499,
       "img": "https://m.media-amazon.com/images/I/41DGOcIimsL._SL1000_.jpg"
     },
     {
-      "name": "Mug",
+      "id": "m2",
+      "category": "Mug",
+      "name": "Trendhub C and Coding Design Printed Coffee Mug| Ceramic Tea",
       "price": 999,
       "img": "https://m.media-amazon.com/images/I/71cjxhpc1CL._SL1500_.jpg"
     },
     {
-      "name": "Mug",
+      "id": "m3",
+      "category": "Mug",
+      "name": "TrendHub Engineering and Coding Design Printed Coffee Mug",
       "price": 299,
       "img": "https://m.media-amazon.com/images/I/41qi3-Dt1eL._SL1000_.jpg"
     },
     {
-      "name": "Mug",
+      "id": "m4",
+      "category": "Mug",
+      "name": "Cup| Gift for Engineers and Coders| Microwave and Dishwasher Safe",
       "price": 699,
       "img": "https://m.media-amazon.com/images/I/41j73+Bq0cL.jpg"
     },
     {
-      "name": "Mug",
+      "id": "m5",
+      "category": "Mug",
+      "name": "Trendhub Programmer and Coding Printed",
       "price": 199,
       "img": "https://m.media-amazon.com/images/I/51S7P9WR-WL._SL1000_.jpg"
     },
     {
-      "name": "Mug",
+      "id": "m6",
+      "category": "Mug",
+      "name": "Artefact Designer Microwave Safe Printed Ceramic Coffee",
       "price": 899,
       "img": "https://m.media-amazon.com/images/I/61bGxZUBVTL._SL1500_.jpg"
     }
